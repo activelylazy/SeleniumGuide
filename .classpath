@@ -1,4 +1,5 @@
 <classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/james/apache-mime4j/0.6/apache-mime4j-0.6.jar"/>
