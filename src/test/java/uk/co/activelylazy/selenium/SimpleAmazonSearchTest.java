@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AmazonSearch {
+public class SimpleAmazonSearchTest {
 
 	private FirefoxDriver driver;
 
