@@ -1,5 +1,8 @@
 package uk.co.activelylazy.selenium;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,5 +34,8 @@ public class SimpleAmazonSearchTest {
 
 		// Click go
 		driver.findElement(By.cssSelector("#navGoButton input")).click();
+		
+		// Confirm top result
+		assertThat(driver.findElement(By.cssSelector("#result_0 .title a")).getText(), is("Transition"));
 	}
 }
