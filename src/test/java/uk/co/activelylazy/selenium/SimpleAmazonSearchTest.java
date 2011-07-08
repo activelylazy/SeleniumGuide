@@ -7,6 +7,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SimpleAmazonSearchTest {
@@ -30,12 +31,15 @@ public class SimpleAmazonSearchTest {
 		driver.get("http://www.amazon.co.uk/");
 		
 		// Enter a search term
-		driver.findElement(By.name("field-keywords")).sendKeys("iain banks");
+		WebElement keywordsField = driver.findElement(By.name("field-keywords")); 
+		keywordsField.sendKeys("iain banks");
 
 		// Click go
-		driver.findElement(By.cssSelector("#navGoButton input")).click();
+		WebElement goButton = driver.findElement(By.cssSelector("#navGoButton input")); 
+		goButton.click();
 		
 		// Confirm top result
-		assertThat(driver.findElement(By.cssSelector("#result_0 .title a")).getText(), is("Transition"));
+		WebElement topResultTitle = driver.findElement(By.cssSelector("#result_0 .title a"));
+		assertThat(topResultTitle.getText(), is("Transition"));
 	}
 }
