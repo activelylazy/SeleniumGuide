@@ -7,7 +7,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class BetterAmazonSearchTest {
 
@@ -26,11 +25,8 @@ public class BetterAmazonSearchTest {
 	
 	@Test public void
 	search_amazon() {
-		driver.get("http://www.amazon.co.uk/");
-		
-		AmazonHomePage homePage = PageFactory.initElements(driver, AmazonHomePage.class);
+		AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
 		AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
-		
 		assertThat(resultsPage.getTopResultTitle(), is("Transition"));
 	}
 }

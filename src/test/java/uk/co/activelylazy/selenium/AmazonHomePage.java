@@ -20,10 +20,14 @@ public class AmazonHomePage {
 	}
 	
 	public AmazonSearchResultsPage searchFor(String searchTerm) {
-		keywordsField.sendKeys("iain banks");
+		keywordsField.sendKeys(searchTerm);
 		goButton.click();
 		
 		return PageFactory.initElements(driver, AmazonSearchResultsPage.class);
 	}
-	
+
+	public static AmazonHomePage navigateTo(WebDriver driver) {
+		driver.get("http://www.amazon.co.uk/");
+		return PageFactory.initElements(driver, AmazonHomePage.class);
+	}
 }
