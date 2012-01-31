@@ -40,6 +40,6 @@ public class SimpleAmazonSearchTest {
 		
 		// Confirm top result
 		WebElement topResultTitle = driver.findElement(By.cssSelector("#result_0 .title a"));
-		assertThat(topResultTitle.getText(), is("Transition"));
+		assertThat(topResultTitle.getText(), is("Stonemouth"));
 	}
 }

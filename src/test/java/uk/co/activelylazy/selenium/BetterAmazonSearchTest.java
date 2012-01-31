@@ -27,6 +27,6 @@ public class BetterAmazonSearchTest {
 	search_amazon() {
 		AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
 		AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
-		assertThat(resultsPage.getTopResultTitle(), is("Transition"));
+		assertThat(resultsPage.getTopResultTitle(), is("Stonemouth"));
 	}
 }
