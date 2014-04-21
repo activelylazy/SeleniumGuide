@@ -12,7 +12,8 @@ public class AmazonHomePage {
 	@FindBy(name="field-keywords")
 	private WebElement keywordsField;
 	
-	@FindBy(css="#navGoButton input")
+	//@FindBy(css="#navGoButton input")
+	@FindBy(className="nav-submit-input")
 	private WebElement goButton;
 	
 	public AmazonHomePage(WebDriver driver) {

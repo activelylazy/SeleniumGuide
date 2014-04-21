@@ -1,6 +1,6 @@
 package uk.co.activelylazy.selenium;
 
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 import org.junit.After;
@@ -27,6 +27,6 @@ public class BetterAmazonSearchTest {
 	search_amazon() {
 		AmazonHomePage homePage = AmazonHomePage.navigateTo(driver);
 		AmazonSearchResultsPage resultsPage = homePage.searchFor("iain banks");
-		assertThat(resultsPage.getTopResultTitle(), is("Stonemouth"));
+		assertThat(resultsPage.getTopResultTitle(), containsString("Quarry"));
 	}
 }

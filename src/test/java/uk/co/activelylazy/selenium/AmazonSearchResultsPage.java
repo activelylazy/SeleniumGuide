@@ -8,7 +8,8 @@ public class AmazonSearchResultsPage {
 
 	private WebDriver driver;
 	
-	@FindBy(css="#result_0 .title a")
+	//@FindBy(css="#result_0 .title a")
+	@FindBy(css="#result_0 .newaps")
 	private WebElement topResultTitle;
 	
 	public AmazonSearchResultsPage(WebDriver driver) {
